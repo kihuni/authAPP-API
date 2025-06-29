@@ -23,7 +23,7 @@ This project sets up a user authentication system using **Django**, **Django RES
 ### 1. Clone the repo
 
 ```
-git clone https://github.com/kihuni/authapi.git
+https://github.com/kihuni/authAPP-API.git
 cd authapi
 
 ```
