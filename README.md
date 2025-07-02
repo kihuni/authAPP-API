@@ -72,15 +72,12 @@ python manage.py runserver
 
 3. Extract uid and token from the link.
 
-4. Send a POST to /auth/users/reset_password/confirm/ with:
+4. Send a POST to /auth/users/reset_password/ for example with:
 
 ```
 {
-  "uid": "<uid_from_link>",
-  "token": "<token_from_link>",
-  "new_password": "yourNewPassword123"
+    "email": "stephenkihuni55@gmail.com"
 }
-
 ```
 
 ###  📬 Email Configuration (Dev)
