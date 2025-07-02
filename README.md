@@ -61,18 +61,18 @@ python manage.py runserver
 | `/signup/`                      | POST   | Custom user registration          |
 | `/login/`                       | POST   | Custom user login (token)         |
 | `/logout/`                      | POST   | Custom user logout (token delete) |
-| `/auth/password/reset/`         | POST   | Request password reset            |
-| `/auth/password/reset/confirm/` | POST   | Reset password using token+uid    |
+| `auth/users/reset_password/`         | POST   | Request password reset            |
+| `/auth/users/reset_password/confirm/` | POST   | Reset password using token+uid    |
 
 
 ### 🧪 Testing Password Reset (Console)
-1. Send a POST to /auth/password/reset/ with your email.
+1. Send a POST to auth/users/reset_password/ with your email.
 
 2. Check the terminal for the reset link.
 
 3. Extract uid and token from the link.
 
-4. Send a POST to /auth/password/reset/confirm/ with:
+4. Send a POST to /auth/users/reset_password/confirm/ with:
 
 ```
 {

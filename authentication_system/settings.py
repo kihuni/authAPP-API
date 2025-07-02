@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'authapp',
     'djoser',
-    'rest_framework.authtoken', # for token-based authentication
+    'rest_framework.authtoken', 
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -50,13 +51,14 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
-
 DJOSER = {
-    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}/',
     'SEND_ACTIVATION_EMAIL': False,
+    'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': True,
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'noreply@example.com'
 
 
 ROOT_URLCONF = 'authentication_system.urls'
